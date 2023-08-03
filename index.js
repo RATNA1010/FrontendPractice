@@ -1,77 +1,93 @@
+//Objects
 
-// var arr1 = [1, 2, 3];
-// var arr2 = [4, 5, 6];
+//Object literals
 
-// const result = [...arr1, ...arr2];
+var Employee = {
+    fName: "Ratan",
+    lName: "babu",
+    id : 101,
+    city: "Hyderabad",
+    dept: function(){
+        console.log("i am function inside object");
+    },
+    car: {
+        company: "Audi",
+        model: "A6",
+        colour: "White"
+    }
+}
 
-// console.log("result:", result);
+// console.log(Object.keys(Employee));
 
+  
 
-// var ayodhya = ["Srirama", "Lakshmana", "Bharata", "Shatrugna"];
+// console.log(Employee.car.colour);
 
-// var midhila = ["Sita", "Urmila", "Mandavi", "Shrutakeerthi"];
+// console.log(Employee.car["model"]);
+// console.log(Employee.fName);
+// console.log(Employee.city);
 
-// for (var i = 0; i < midhila.length; i++) {
-//     ayodhya.push(midhila[i]);
-// }
+// console.log(Employee.id);
 
-// console.log("Final:", ayodhya);
+Employee.gender = "Male";
+// console.log(Employee);
 
-/* const ramayan = [...ayodhya, ...midhila];
-console.log(ramayan);
+// console.log(Employee.dept());
 
-var [king, , , , queen, ...rest] = ramayan;
-console.log("king:", king);
-console.log("queen:", queen);
-console.log("Sisters:", rest); */
+var {fName, lName, city, id} = Employee;
 
-//for loop
+console.log(fName, city, gender = "male");
 
-// var names = ["Ratan", "Govind", "Babu"];
+//Object constructor function
 
-// for(var i = 0; i < names.length; i++) {
-//     if(names[i] == "Ratan"){
+function Person(user, city){
+    this.name = user;
+    this.city = city;
+    this.email = user+"@abc.com";
+}
 
-//     console.log("name is: ", names[i]);
-//     }
-// }
+var emp_1 = new Person("Ratan", "HYD");
 
+var emp_2 = new Person("Yash", "BLR");
 
-//Map method
+// var clg_2 = new College("University", "Sambala", 6);
 
-var games = ["Vollyball", "Cricket", "Kabaddi", "Football"];
+// console.log(emp_1);
 
-// var result = games.map(function(sport){
-//     if(sport == "Cricket"){
-//     return sport;
-//     }
-//     return null;
-// }).filter(function(value){
-//     return value !==null;
-// });
+// console.log("person details: ", emp_2);
 
-// console.log(result);
+var User = {
+    fName: "test",
+    age: 30,
+    city: "hyd"
 
+}
 
-//Filter method
+let a = "fName";
 
-// var filteredGames = games.filter(function(sport){
-//     return sport !== "Cricket";
-// });
+// console.log(User.a)
+// console.log(User["fName"])
 
-// console.log(filteredGames);
+var Example = [{
+    name: "test1",
+    id:10,
+    age: 21
+},
+{
+    name: "test2",
+    id: 11,
+    age: 22
+},
+{
+    name: "test3",
+    id: 12,
+    age: 22
+}]
 
-var epic1 = "Ramayanam";
+console.log(Example);
 
-var epic2 = "Mahabharatam";
+var result = Example.filter(function(value){
+    return value.age == 22;
+  });
 
-// console.log(epic.length);
-
-// console.log(epic.indexOf("y"));
-
-// console.log(epic1+" "+epic2);
-
-// console.log(epic1.concat(" ").concat(epic2));
-
-
-
+console.log(result)
