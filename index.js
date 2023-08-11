@@ -1,46 +1,71 @@
-// Functions
-
-console.log("value of a is: ", a); //Hoisting - accessing variables top of declaration will result "undefined" instead of error because of hoisting
-
 var a = 10;
-var b = "Ratan";
-var arr = [1, 2, 3, 4, 5];
 
-// console.log("value of a is: ", a);
-// console.log("value of b is: ", b);
-// console.log("value of arr is: ", arr);
+// console.log(a);
 
+// console.log("Hello :", this);
 
-//ES5 - let, const are function/local/block scoped  
-function myFunction() {
-    var i = 11;
-    console.log("value of a is: ", a); //10
-    console.log("value of b is: ", b); //Ratan
-    console.log("value of arr is: ", arr); //[1, 2, 3, 4, 5]
-    console.log("value of i is: ", i); // 11
+function addition(a, b){
+    return a+b;
 }
-myFunction();
-// console.log("value of i is: ", i); // we can't access the i variable outside function because it is function scoped variable 
+// console.log(addition(4, 62));
 
-//const(immutable - can't change the value after assigned)
-// const str = "Ratan";
-
-// str = "Goviind"; //cant,t change const value
-
-// console.log(str);
-
-for(let i = 0; i < 5; i++){
-    console.log(i);
+const user = {
+    name: "Ratan",
+    id: 101,
+    city: "HYD"
 }
 
-//console.log(i); // can't access i since it is block scoped
+function printNumbers() {
 
-function myExample(user, city){
+    console.log(user.city)
+    const arr = [1, 2, 3, 4];
+    // arr.push(a);
+    // arr.push(b);
+    // arr.push(c);
 
-    console.log(arguments)
-    console.log("Name is: ", user);
-    console.log("City is: ", city);
+    for(let i = 0; i < arr.length; i++){
+        // console.log(arr[i]);
+    }
 }
-myExample("Ratan", "HYD");
+printNumbers(user);
+
+
+function addition(a, b){
+    return a+b;
+}
+
+const result = addition(111234, 567845);
+
+// console.log(result);
+
+
+//Arrow function 
+ arrowAddition = (a, b) => a+b
+
+//  console.log(arrowAddition(87654, 45345));
+
+
+var arr = [1, 2, 3, 4, 5,"Ratna"];
+// console.log(typeof arr[5]);
+
+const result1 = arr.map((value,index) => {
+    
+    console.log(value + 2,index)
+    return value;
+  
+})
+
+console.log(result1);
+
+
+
+
+ 
+
+
+
+
+
+
 
 
